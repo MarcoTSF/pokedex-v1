@@ -32,17 +32,17 @@ main{
     position: absolute;
     bottom: 55%;
     left: 50%;
-    transform: translate(-63%, 20%);
-    height: 18%;
+    transform: translate(-55%, 20%);
+    height: 17%;
 }
 
 .pokemon-data{
     position: absolute;
     font-weight: 600;
     color: rgb(119, 117, 117);
-    top: 54.5%;
+    top: 55.5%;
     right: 27%;
-    font-size: clamp(8px, 5vw, 25px);
+    font-size: clamp(8px, 5vw, 20px);
 }
 
 .pokemon-name{
