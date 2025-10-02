@@ -25,30 +25,21 @@ const renderPokemon = async (pokemon) => {
     const data = await fetchPokemon(pokemon);
 
     if (data) {
-        pokemonImage.style.display = 'block';
+        const sprite = data.sprites.versions['generation-v']['black-white'].animated.front_default || 
+                       data.sprites.front_default ||
+                       data.sprites.other.dream_world.front_default ||
+                       data.sprites.other.home.front_default;
+    
         pokemonName.innerHTML = data.name;
         pokemonNumber.innerHTML = data.id;
-
-        let sprite = data?.sprites?.versions?.['generation-v']?.['black-white']?.animated?.front_default;
-
-        if (!sprite) {
-            sprite = data.sprites.front_default;
-        }
-
-        if (!sprite) {
-            sprite = data.sprites.other['dream_world'].front_default;
-        }
-
-        if (!sprite) {
-            sprite = data.sprites.other['home'].front_default;
-        }
-
-        if (!sprite) {
-            pokemonImage.style.display = 'none';
-        } else {
+    
+        if (sprite) {
+            pokemonImage.style.display = 'block';
             pokemonImage.src = sprite;
+        } else {
+            pokemonImage.style.display = 'none';
         }
-
+    
         input.value = '';
         searchPokemon = data.id;
     } else {
