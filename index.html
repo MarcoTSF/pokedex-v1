@@ -12,28 +12,69 @@
 </head>
 <body>
     <main>
-        <img src="#" class="pokemon-image">
+        <div class="pokedex-container">
+            <img src="./src/images/pokedex.png" alt="Pokédex" class="pokedex">
         
-        <h1 class="pokemon-data">
-            <span class="pokemon-number"></span> - 
-            <span class="pokemon-name"></span>
-        </h1>
 
-        <form class="form">
-            <input 
-                type="search"
-                class="input-search"
-                placeholder="Nome ou Número"
-                required
-            />
-        </form>
+            <div class="pokemon-image-container">
+                <img src="#" class="pokemon-image">
+            </div>
+            
+            <div class="pokemon-data-container">
+                <h1 class="pokemon-data">
+                    <span class="pokemon-number"></span> - 
+                    <span class="pokemon-name"></span>
+                </h1>
+            </div>
 
-        <div class="buttons">
-            <button class="button btn-prev">&lt; Prev</button>
-            <button class="button btn-next">Next &gt;</button>
+            <div class="search-container">
+                <form class="form">
+                    <input 
+                        type="search"
+                        class="input-search"
+                        placeholder="Nome ou Número"
+                        required
+                    />
+                </form>
+
+                <div class="buttons">
+                    <button class="button btn-prev">&lt; Prev</button>
+                    <button class="button btn-next">Next &gt;</button>
+                </div>
+            </div>
+
+            <div class="pokemon-info-container">
+
+                <div class="pokemon-types">
+                    <h2>Tipo</h2>
+                    <div class="types-list">
+                    <span class="type grass">Grass</span>
+                    <span class="type poison">Poison</span>
+                    </div>
+                </div>
+
+                <div class="pokemon-stats">
+                    <h2>Status</h2>
+                    <ul>
+                    <li>HP: <span class="stat-hp"></span></li>
+                    <li>Ataque: <span class="stat-attack"></span></li>
+                    <li>Defesa: <span class="stat-defense"></span></li>
+                    <li>Velocidade: <span class="stat-speed"></span></li>
+                    </ul>
+                </div>
+
+                <div class="pokemon-evolution-controls">
+                    <h2>Evoluções</h2>
+                    <button class="button btn-stage2">Stage 2</button>
+                    <button class="button btn-stage3">Stage 3</button>
+                </div>
+
+                <div class="pokemon-evolution">
+                    <img src="#" alt="Evolução do Pokémon" class="pokemon-evolution-image">
+                </div>
+
+            </div>
         </div>
-        
-        <img src="./src/images/pokedex.png" alt="Pokédex" class="pokedex">
     </main>
 </body>
 </html>
